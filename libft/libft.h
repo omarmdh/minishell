@@ -6,7 +6,7 @@
 /*   By: ommadhi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:07:37 by ommadhi           #+#    #+#             */
-/*   Updated: 2019/10/16 19:08:11 by ommadhi          ###   ########.fr       */
+/*   Updated: 2019/11/16 11:44:12 by ommadhi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+char				**ft_spl_whitespaces(char *str);
 char				*ft_strndup(const char *s, int size);
 int					ft_strncmp(const char *str1, const char *str2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -63,7 +64,7 @@ void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_putchar(char c);
-void				ft_putstr(char const *str);
+int					ft_putstr(char const *str);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putnbr(int n);

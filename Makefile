@@ -6,7 +6,7 @@
 #    By: ommadhi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 00:51:07 by ommadhi           #+#    #+#              #
-#    Updated: 2019/10/19 16:57:10 by ommadhi          ###   ########.fr        #
+#    Updated: 2019/11/16 11:41:06 by ommadhi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,11 @@ SRCS =  src/minishell.c\
 		src/ft_setenv.c\
 		src/ft_echo.c\
 		src/ft_free_exit.c\
+		src/ft_error.c\
+		src/ft_git.c\
+		src/ft_func.c\
+		src/helpecho.c\
+		src/ft_dol_fun.c\
 
 OBJS    = $(SRCS:.c=.o)
 	NAME    = minishell
@@ -26,7 +31,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@make -C libft
-	gcc -ggdb $(CFLAG) $(SRCS) libft/libft.a -o $(NAME)
+	gcc $(CFLAGS) $(SRCS) libft/libft.a -o $(NAME)
 
 clean :
 	rm -rf $(OBJS)

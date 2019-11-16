@@ -6,13 +6,13 @@
 /*   By: ommadhi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 21:40:17 by ommadhi           #+#    #+#             */
-/*   Updated: 2019/04/05 15:28:44 by ommadhi          ###   ########.fr       */
+/*   Updated: 2019/11/13 01:10:53 by ommadhi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+int		ft_putstr(char const *str)
 {
 	int i;
 
@@ -25,4 +25,5 @@ void	ft_putstr(char const *str)
 			i++;
 		}
 	}
+	return (0);
 }

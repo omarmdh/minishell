@@ -6,7 +6,7 @@
 /*   By: ommadhi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 20:25:21 by ommadhi           #+#    #+#             */
-/*   Updated: 2019/10/19 17:02:33 by ommadhi          ###   ########.fr       */
+/*   Updated: 2019/11/16 12:28:03 by ommadhi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ char	*ft_joinpath(char **envp, char *cmd)
 	if (ft_check_excist(cmd) == 1)
 		return (ft_strdup(cmd));
 	tmp = check_path(envp);
+	if (tmp == NULL)
+		ft_put4str("minishell: command not found: ", cmd, "", "\n");
 	tabpath = ft_strsplit(tmp, ':');
 	while (tabpath[i])
 	{
